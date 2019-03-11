@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?language java?>
+
+<AnchorPane prefHeight="591.0" prefWidth="983.0" stylesheets="@music.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Homework.Controller.MainWindow.EventTest">
+   <children>
+      <Line endX="380.0" layoutX="104.0" layoutY="291.0" rotate="90.0" startX="-100.0" stroke="#6b6565" strokeWidth="0.5" />
+      <Line endX="871.0" layoutX="101.0" layoutY="533.0" startX="-100.0" strokeWidth="0.5">
+         <stroke>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#6b6565" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </Line>
+      <HBox alignment="CENTER" layoutX="254.0" layoutY="529.0" prefHeight="65.0" prefWidth="729.0">
+         <children>
+            <Label fx:id="Infor" prefHeight="30.0" prefWidth="441.0" text="             乐趣音乐 享受音乐乐趣" textAlignment="CENTER" textFill="#bc2d28">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="38.0" prefWidth="35.0" styleClass="label-voice">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="40.0" right="8.0" top="8.0" />
+               </HBox.margin>
+               <effect>
+                  <ImageInput y="2.0">
+                     <source>
+                        <Image url="@Image/voice.png" />
+                     </source>
+                  </ImageInput>
+               </effect></Label>
+            <Button mnemonicParsing="false" onAction="#onVolumeUp" prefHeight="30.0" prefWidth="44.0" text="增加音量">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="@Image/加.png" />
+                     </source></ImageInput>
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onVolumeDown" prefHeight="30.0" prefWidth="44.0" text="减小音量">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="@Image/减.png" />
+                     </source>
+                  </ImageInput>
+               </effect></Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="-9.0" layoutY="533.0" prefHeight="65.0" prefWidth="244.0" spacing="20.0" AnchorPane.rightAnchor="739.0">
+         <children>
+            <Button onAction="#onPreMusic" mnemonicParsing="false" prefHeight="50.0" prefWidth="49.0" styleClass="button-pre">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="@Image/previous.png" />
+                     </source>
+                  </ImageInput>
+               </effect></Button>
+            <Button mnemonicParsing="false" onAction="#OnPauseClick" prefHeight="50.0" prefWidth="50.0" styleClass="button-play">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="@Image/play.png" />
+                     </source>
+                  </ImageInput>
+               </effect></Button>
+            <Button onAction="#onNextMusic" mnemonicParsing="false" prefHeight="50.0" prefWidth="49.0" styleClass="button-next">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="@Image/next.png" />
+                     </source>
+                  </ImageInput>
+               </effect></Button>
+         </children>
+      </HBox>
+      <ListView fx:id="songlist" layoutY="83.0" onMouseClicked="#MouseItem" prefHeight="390.0" prefWidth="244.0" styleClass="list-view" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bc2d28" height="50.0" stroke="#fafafa" strokeType="INSIDE" strokeWidth="0.0" width="983.0" />
+      <Button layoutX="53.0" layoutY="6.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="146.0" styleClass="title" stylesheets="@music.css" text="乐 趣 音 乐" textAlignment="CENTER" textFill="#e4d60f">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Button>
+      <Button layoutX="924.0" mnemonicParsing="false" onAction="#onWinClose" prefHeight="50.0" prefWidth="49.0" styleClass="button-close">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="@Image/close.png" />
+               </source>
+            </ImageInput>
+         </effect></Button>
+      <TextField fx:id="SearchText" layoutX="319.0" layoutY="10.0" prefHeight="30.0" prefWidth="222.0" promptText="在此输入你要查询的歌曲名字" />
+      <Button layoutX="559.0" layoutY="8.0" mnemonicParsing="false" onAction="#OnSearchClick" prefHeight="36.0" prefWidth="36.0">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="@Image/search.png" />
+               </source>
+            </ImageInput>
+         </effect>
+      </Button>
+      <HBox alignment="CENTER" layoutY="468.0" prefHeight="65.0" prefWidth="244.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onDirRefresh" prefHeight="25.0" prefWidth="25.0" text="刷新列表">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="@Image/refresh.png" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Button>
+            <Button onAction="#onAddToLove" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="Button">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="@Image/love.png" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onDirChoose" prefHeight="25.0" prefWidth="25.0" styleClass="" text="添加">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="@Image/tianjia.png" />
+                     </source>
+                  </ImageInput>
+               </effect>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+      <ImageView fitHeight="332.0" fitWidth="358.0" layoutX="349.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+                     <Image url="@Image/record.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="Lovelist" layoutX="783.0" layoutY="84.0" prefHeight="447.0" prefWidth="200.0" styleClass="list-view" />
+      <Label layoutX="14.0" layoutY="56.0" text="我的音乐列表" />
+      <Label layoutX="783.0" layoutY="56.0" text="喜欢列表" />
+   </children>
+</AnchorPane>

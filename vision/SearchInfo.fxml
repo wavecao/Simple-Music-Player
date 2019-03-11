@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?language java?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="650.0" prefWidth="930.0" stylesheets="@Search.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Homework.Controller.SearchWindow.Search_Controller">
+   <children>
+      <BorderPane prefHeight="380.0" prefWidth="930.0">
+         <center>
+            <TableView fx:id="MusicTable" maxHeight="380.0" maxWidth="925.0" prefHeight="339.0" prefWidth="925.0" BorderPane.alignment="CENTER">
+              <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="50.0" text="序号">
+
+                  </TableColumn>
+                  <TableColumn fx:id="songnameColumn" prefWidth="345.0" text="歌曲名称">
+
+                  </TableColumn>
+                  <TableColumn fx:id="singernameColumn" minWidth="0.0" prefWidth="82.0" text="歌手">
+
+                  </TableColumn>
+                  <TableColumn fx:id="albumnameColumn" prefWidth="345.0" text="专辑名称">
+
+                  </TableColumn>
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <Label minWidth="930.0" prefHeight="54.0" prefWidth="930.0" text="         搜索结果如下表(只显示了部分内容),由于版权限制无法在线播放,点击下方按钮可跳转至在线搜索页面" textFill="#bc2d28" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="930.0" spacing="50.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="Close" mnemonicParsing="false" onAction="#onClose" prefHeight="39.0" prefWidth="110.0" text="关闭搜索页面" textFill="#bc2d28" />
+                  <Button mnemonicParsing="false" onAction="#onInternetRes" prefHeight="39.0" prefWidth="110.0" text="" textFill="#bc2d28">
+                     <graphic>
+                        <Hyperlink text="打开在线结果" />
+                     </graphic></Button>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

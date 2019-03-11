@@ -1,0 +1,41 @@
+.title{
+    -fx-background-color: null;
+    -fx-border-style: none;
+    -fx-font-size: 19;
+}
+.button-play{
+    -fx-background-color: null;
+    -fx-border-style: none;
+
+}
+.button-next{
+    -fx-background-color: null;
+    -fx-border-style: none;
+
+}
+.button-pre{
+    -fx-background-color: null;
+    -fx-border-style: none;
+
+}
+.button-close{
+    -fx-background-color: null;
+    -fx-border-style: none;
+}
+.button-novoice{
+    -fx-background-color: null;
+    -fx-border-style: none;
+    -fx-background-repeat: no-repeat;
+}
+.label-voice{
+    -fx-background-color: none;
+    -fx-border-style: none;
+    -fx-background-repeat: no-repeat;
+}
+.list-view{
+    -fx-text-fill: #292e34;
+    -fx-font-family: Arial;
+}
+.list-view{
+    -fx-border-width: 0;
+}
